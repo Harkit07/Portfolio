@@ -31,7 +31,7 @@ function App() {
       {/* Navbar */}
       <nav className="fixed top-0 w-full z-50 glass-card rounded-none border-x-0 border-t-0 border-b-white/10 px-6 py-4 flex justify-between items-center">
         <div className="font-bold text-xl tracking-tighter bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-          HS.
+          Harkit Singh
         </div>
         <div className="hidden md:flex gap-6 text-sm font-medium text-gray-300">
           <a href="#about" className="hover:text-white transition-colors">
