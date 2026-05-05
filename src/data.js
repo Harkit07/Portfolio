@@ -109,10 +109,18 @@ export const resumeData = {
       ],
     },
   ],
-  education: {
-    degree: "Bachelor of Computer Applications (BCA)",
-    institution: "Shri Khushal Das University Hanumangarh, Rajasthan",
-    dates: "2022 – 2024",
-    metrics: "CGPA: 7.0",
-  },
+  education: [
+    {
+      degree: "Master of Computer Applications (MCA)",
+      institution: "Shri Khushal Das University Hanumangarh, Rajasthan",
+      dates: "2025 – Present",
+      metrics: "",
+    },
+    {
+      degree: "Bachelor of Computer Applications (BCA)",
+      institution: "Shri Khushal Das University Hanumangarh, Rajasthan",
+      dates: "2022 – 2024",
+      metrics: "CGPA: 7.0",
+    },
+  ],
 };

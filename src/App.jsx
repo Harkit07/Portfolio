@@ -219,19 +219,30 @@ function App() {
               Education
               <div className="h-px bg-white/10 flex-1"></div>
             </h3>
-            <div className="glass-card p-8 mb-20 flex flex-col md:flex-row justify-between items-start md:items-center">
-              <div>
-                <h4 className="text-xl font-bold text-white">
-                  {education.degree}
-                </h4>
-                <p className="text-gray-400 mt-1">{education.institution}</p>
-                <p className="text-primary mt-2 font-medium">
-                  {education.metrics}
-                </p>
-              </div>
-              <span className="text-gray-500 mt-4 md:mt-0 text-sm">
-                {education.dates}
-              </span>
+            <div className="flex flex-col gap-6 mb-20">
+              {education.map((item, index) => (
+                <div
+                  key={index}
+                  className="glass-card p-8 flex flex-col md:flex-row justify-between items-start md:items-center"
+                >
+                  <div>
+                    <h4 className="text-xl font-bold text-white">
+                      {item.degree}
+                    </h4>
+                    <p className="text-gray-400 mt-1">{item.institution}</p>
+
+                    {/* Conditional rendering: Only show this <p> if metrics is not empty */}
+                    {item.metrics && (
+                      <p className="text-primary mt-2 font-medium">
+                        {item.metrics}
+                      </p>
+                    )}
+                  </div>
+                  <span className="text-gray-500 mt-4 md:mt-0 text-sm">
+                    {item.dates}
+                  </span>
+                </div>
+              ))}
             </div>
 
             <footer className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
