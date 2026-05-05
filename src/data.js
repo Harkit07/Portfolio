@@ -14,6 +14,7 @@ export const resumeData = {
         url: "https://boutiquefrontend-ymww.onrender.com",
       },
       { name: "Wanderlust", url: "https://wanderlust-274r.onrender.com" },
+      { name: "ChatAI", url: "https://chatai-vuf2.onrender.com" },
     ],
   },
   skills: [
@@ -39,7 +40,7 @@ export const resumeData = {
     { category: "Databases", items: ["MongoDB", "Mongoose ODM", "SQL"] },
     {
       category: "Cloud & DevOps",
-      items: ["Cloudinary", "Render", "Git", "GitHub"],
+      items: ["Cloudinary", "Render", "Git", "GitHub", "Open API Key"],
     },
     {
       category: "Tools",
@@ -79,6 +80,19 @@ export const resumeData = {
         "Implemented secure JWT-based authentication with profile management, password reset via email flow, and session handling — reducing unauthorized access risk.",
         "Integrated Cloudinary for scalable image uploads and storage, enabling dynamic product media management without server-side file bloat.",
         "Engineered a multi-component cart system with real-time state updates using React.js and form validation via Formik, improving checkout reliability.",
+        "Deployed frontend and backend independently on Render; Live Demo | GitHub",
+      ],
+    },
+    {
+      title: "ChatAI",
+      stack: "React.js, Node.js, Express.js, MongoDB, JWT, Open API Key",
+      dates: "Jan 2026 – Present",
+      bullets: [
+        "Built a full-stack AI chat platform supporting multi-user sessions with persistent chat storage and real-time responses ($<$1s latency)",
+        "Implemented secure JWT authentication with protected routes, reducing unauthorized access risk at API level",
+        "Designed scalable chat system handling 1000+ messages per user with efficient MongoDB queries",
+        "Optimized frontend using React Context API, reducing unnecessary re-renders by 30%+",
+        "Integrated Markdown rendering with syntax-highlighted code blocks for improved user experience",
         "Deployed frontend and backend independently on Render; Live Demo | GitHub",
       ],
     },
