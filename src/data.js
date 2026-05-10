@@ -11,10 +11,13 @@ export const resumeData = {
       { name: "GitHub", url: "https://github.com/Harkit07" },
       {
         name: "Boutique App",
-        url: "https://boutiquefrontend-ymww.onrender.com",
+        url: "https://boutiquefrontend-ymww.onrender.com/",
       },
-      { name: "Wanderlust", url: "https://wanderlust-274r.onrender.com" },
-      { name: "ChatAI", url: "https://chatai-vuf2.onrender.com" },
+      {
+        name: "Wanderlust",
+        url: "https://wanderlust-274r.onrender.com/listings",
+      },
+      { name: "AI-Assistant", url: "https://ai-assistant-nsg8.onrender.com/" },
     ],
   },
   skills: [
@@ -40,7 +43,7 @@ export const resumeData = {
     { category: "Databases", items: ["MongoDB", "Mongoose ODM", "SQL"] },
     {
       category: "Cloud & DevOps",
-      items: ["Cloudinary", "Render", "Git", "GitHub", "Open API Key"],
+      items: ["Cloudinary", "Render", "Git", "GitHub", "OpenAI API"],
     },
     {
       category: "Tools",
@@ -84,15 +87,15 @@ export const resumeData = {
       ],
     },
     {
-      title: "ChatAI",
+      title: "AI-Assistant",
       stack: "React.js, Node.js, Express.js, MongoDB, JWT, Open API Key",
       dates: "Jan 2026 – Present",
       bullets: [
-        "Built a full-stack AI chat platform supporting multi-user sessions with persistent chat storage and real-time responses ($<$1s latency)",
-        "Implemented secure JWT authentication with protected routes, reducing unauthorized access risk at API level",
-        "Designed scalable chat system handling 1000+ messages per user with efficient MongoDB queries",
-        "Optimized frontend using React Context API, reducing unnecessary re-renders by 30%+",
-        "Integrated Markdown rendering with syntax-highlighted code blocks for improved user experience",
+        "Built a full-stack ChatGPT clone with multi-turn conversations, persistent chat history, and thread management using React, Node.js, and MongoDB",
+        "Implemented JWT authentication with protected API routes for secure user sessions",
+        "Designed a scalable chat storage system with per-user thread organisation using efficient MongoDB queries",
+        "Built a responsive UI with React Context API for global state management across chat, sidebar, and auth flows",
+        "Integrated Markdown rendering with syntax-highlighted code blocks for clean AI response display",
         "Deployed frontend and backend independently on Render; Live Demo | GitHub",
       ],
     },
