@@ -4,14 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
+        primary: "#6366f1",      // indigo — change to your preferred color
+        secondary: "#a78bfa",    // violet
         background: "#0a0a0a",
-        foreground: "#ededed",
-        primary: "#3b82f6", // Blue
-        secondary: "#8b5cf6", // Purple
-      },
-      backgroundImage: {
-        glass:
-          "linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%)",
+        glass: "rgba(255,255,255,0.05)",
       },
     },
   },

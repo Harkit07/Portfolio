@@ -3,7 +3,7 @@ import {
   Mail,
   Phone,
   MapPin,
-  Github,
+  GitBranch,
   ExternalLink,
   Download,
 } from "lucide-react";
@@ -26,11 +26,11 @@ function App() {
   return (
     <div className="min-h-screen relative selection:bg-primary/30">
       {/* Subtle Background Glow */}
-      <div className="fixed inset-0 z-[-1] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/20 via-background to-background pointer-events-none" />
+      <div className="fixed inset-0 z-[-1] bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-blue-900/20 via-background to-background pointer-events-none" />
 
       {/* Navbar */}
       <nav className="fixed top-0 w-full z-50 glass-card rounded-none border-x-0 border-t-0 border-b-white/10 px-6 py-4 flex justify-between items-center">
-        <div className="font-bold text-xl tracking-tighter bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+        <div className="font-bold text-xl tracking-tighter bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent">
           Harkit Singh
         </div>
         <div className="hidden md:flex gap-6 text-sm font-medium text-gray-300">
@@ -259,7 +259,7 @@ function App() {
                     className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
                   >
                     {link.name === "GitHub" ? (
-                      <Github size={16} />
+                      <GitBranch size={16} />
                     ) : (
                       <ExternalLink size={16} />
                     )}

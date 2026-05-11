@@ -1,6 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #6366f1;
+  --color-secondary: #a78bfa;
+  --color-background: #0a0a0a;
+}
 
 body {
   background-color: #0a0a0a;
@@ -11,10 +15,9 @@ body {
 }
 
 .glass-card {
-  @apply bg-glass backdrop-blur-lg border border-white/10 shadow-xl rounded-2xl;
+  @apply bg-white/5 backdrop-blur-lg border border-white/10 shadow-xl rounded-2xl;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
