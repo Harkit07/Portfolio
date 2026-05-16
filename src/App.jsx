@@ -38,7 +38,7 @@ function App() {
             About
           </a>
           <a href="#experience" className="hover:text-white transition-colors">
-            Experience
+            Experience 
           </a>
           <a href="#projects" className="hover:text-white transition-colors">
             Projects
