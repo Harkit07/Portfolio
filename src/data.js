@@ -15,7 +15,7 @@ export const resumeData = {
       },
       {
         name: "Wanderlust",
-        url: "https://wanderlust-274r.onrender.com/listings",
+        url: "https://wanderlust-jade-sigma.vercel.app/listings",
       },
       { name: "AI-Assistant", url: "https://ai-assistant-nsg8.onrender.com/" },
     ],
