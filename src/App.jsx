@@ -38,7 +38,7 @@ function App() {
             About
           </a>
           <a href="#experience" className="hover:text-white transition-colors">
-            Experience 
+            Experience
           </a>
           <a href="#projects" className="hover:text-white transition-colors">
             Projects
@@ -177,6 +177,28 @@ function App() {
                       </li>
                     ))}
                   </ul>
+                  <div className="flex gap-4 mt-auto pt-4 border-t border-white/10">
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 text-sm text-primary hover:text-white transition-colors font-medium"
+                      >
+                        <ExternalLink size={14} /> Live Demo
+                      </a>
+                    )}
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 text-sm text-gray-400 hover:text-white transition-colors"
+                      >
+                        <GitBranch size={14} /> GitHub
+                      </a>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
