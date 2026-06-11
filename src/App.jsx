@@ -108,9 +108,9 @@ function App() {
               <div className="h-px bg-white/10 flex-1"></div>
             </h3>
             <div className="space-y-6">
-              {achievements.map((item, i) => (
+              {achievements.map((item) => (
                 <div
-                  key={i}
+                  key={item.title}
                   className="glass-card p-8 hover:border-primary/40 transition-colors"
                 >
                   <div className="flex flex-col md:flex-row justify-between md:items-center mb-6">
@@ -127,9 +127,9 @@ function App() {
                     </span>
                   </div>
                   <ul className="space-y-3">
-                    {item.bullets.map((bullet, idx) => (
+                    {item.bullets.map((bullet) => (
                       <li
-                        key={idx}
+                        key={bullet}
                         className="flex items-start gap-3 text-gray-300 leading-relaxed"
                       >
                         <span className="text-secondary mt-1.5 text-lg leading-none">
@@ -153,9 +153,9 @@ function App() {
               <div className="h-px bg-white/10 flex-1"></div>
             </h3>
             <div className="grid md:grid-cols-2 gap-6">
-              {projects.map((project, i) => (
+              {projects.map((project) => (
                 <div
-                  key={i}
+                  key={project.title}
                   className="glass-card p-8 flex flex-col hover:-translate-y-2 transition-transform duration-300"
                 >
                   <div className="flex justify-between items-start mb-4">
@@ -170,8 +170,8 @@ function App() {
                     {project.stack}
                   </p>
                   <ul className="space-y-3 text-sm text-gray-300 flex-1 mb-6">
-                    {project.bullets.map((bullet, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
+                    {project.bullets.map((bullet) => (
+                      <li key={bullet} className="flex items-start gap-2">
                         <span className="text-white/30 mt-1">-</span>
                         <span>{bullet}</span>
                       </li>
@@ -213,15 +213,15 @@ function App() {
               <div className="h-px bg-white/10 flex-1"></div>
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {skills.map((skillGroup, i) => (
-                <div key={i} className="glass-card p-6">
+              {skills.map((skillGroup) => (
+                <div key={skillGroup.category} className="glass-card p-6">
                   <h4 className="text-lg font-semibold text-white mb-4">
                     {skillGroup.category}
                   </h4>
                   <div className="flex flex-wrap gap-2">
-                    {skillGroup.items.map((skill, idx) => (
+                    {skillGroup.items.map((skill) => (
                       <span
-                        key={idx}
+                        key={skill}
                         className="bg-white/5 border border-white/10 text-sm px-3 py-1.5 rounded-md text-gray-300"
                       >
                         {skill}
@@ -242,9 +242,9 @@ function App() {
               <div className="h-px bg-white/10 flex-1"></div>
             </h3>
             <div className="flex flex-col gap-6 mb-20">
-              {education.map((item, index) => (
+              {education.map((item) => (
                 <div
-                  key={index}
+                  key={item.degree}
                   className="glass-card p-8 flex flex-col md:flex-row justify-between items-start md:items-center"
                 >
                   <div>
@@ -272,9 +272,9 @@ function App() {
                 © {new Date().getFullYear()} Harkit Singh. All rights reserved.
               </p>
               <div className="flex gap-6">
-                {basics.links.map((link, i) => (
+                {basics.links.map((link) => (
                   <a
-                    key={i}
+                    key={link.name}
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
