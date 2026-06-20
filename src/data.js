@@ -114,7 +114,7 @@ export const resumeData = {
       title: "Boutique — E-Commerce Platform",
       stack: "MERN · JWT · Cloudinary · Multer · Material UI",
       dates: "Jan 2026 – Mar 2026",
-      liveUrl: "https://boutiquefrontend-ymww.onrender.com",
+      liveUrl: "https://ravneetboutique.qzz.io/",
       githubUrl: "https://github.com/Harkit07/Boutique",
       bullets: [
         "Developed a full-stack e-commerce app with 5 modules (auth, products, cart, reviews, profile) and fully responsive UI across mobile, tablet, and desktop.",
