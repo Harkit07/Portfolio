@@ -11,6 +11,11 @@ export const resumeData = {
       { name: "GitHub", url: "https://github.com/Harkit07" },
       { name: "Portfolio", url: "https://portfolio-8zov.onrender.com" },
       { name: "LinkedIn", url: "https://www.linkedin.com/in/harkit-singh/" },
+      { name: "LeetCode", url: "https://leetcode.com/u/Harkit07/" },
+      {
+        name: "GeeksforGeeks",
+        url: "https://www.geeksforgeeks.org/profile/harkit07?tab=activity",
+      },
     ],
   },
   skills: [
