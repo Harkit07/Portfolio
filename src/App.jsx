@@ -331,9 +331,9 @@ function App() {
                 {education.map((item) => (
                   <div
                     key={item.degree}
-                    className="glass-card p-8 flex flex-col md:flex-row justify-between items-start md:items-center"
+                    className="glass-card min-w-0 p-8 flex flex-col md:flex-row justify-between items-start md:items-center"
                   >
-                    <div>
+                    <div className="min-w-0">
                       <h4 className="text-xl font-bold text-white">
                         {item.degree}
                       </h4>
@@ -358,14 +358,14 @@ function App() {
                   © {new Date().getFullYear()} Harkit Singh. All rights
                   reserved.
                 </p>
-                <div className="flex gap-6">
+                <div className="w-full md:w-auto flex flex-wrap justify-center gap-x-6 gap-y-3">
                   {basics.links.map((link) => (
                     <a
                       key={link.name}
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
+                      className="min-w-0 flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
                     >
                       {link.name === "GitHub" ? (
                         <GitBranch size={16} />
