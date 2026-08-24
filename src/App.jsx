@@ -116,7 +116,7 @@ function App() {
                 </span>
               </div>
 
-              <div className="flex flex-wrap gap-3 mt-6">
+              <div className="grid grid-cols-1 sm:flex sm:flex-wrap gap-3 mt-6">
                 {basics.links
                   .filter((link) =>
                     ["LinkedIn", "LeetCode", "GeeksforGeeks"].includes(
@@ -129,14 +129,14 @@ function App() {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 text-sm text-gray-300 hover:border-primary/50 hover:text-white transition-colors"
+                      className="w-full sm:w-auto min-w-0 flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-white/10 text-sm text-gray-300 hover:border-primary/50 hover:text-white transition-colors"
                     >
                       {link.name === "LeetCode" ? (
                         <Code2 size={16} />
                       ) : (
                         <ExternalLink size={16} />
                       )}
-                      {link.name}
+                      <span className="break-words text-center">{link.name}</span>
                     </a>
                   ))}
               </div>
