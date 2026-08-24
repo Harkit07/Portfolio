@@ -17,6 +17,7 @@ A modern, animated personal portfolio website built with React and Vite. Feature
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
 - [Customization](#customization)
+- [Online Profiles](#online-profiles)
 - [Projects](#projects)
 - [Sections Overview](#sections-overview)
 - [Deployment](#deployment)
@@ -101,6 +102,12 @@ Optimized output goes to the `dist/` folder, ready to deploy on Render, Vercel, 
 ## ✏️ Customization
 
 All personal content is centralized in **`src/data.js`**. You never need to touch `App.jsx` to update your information — just edit the data file and the whole site updates.
+
+## 🌐 Online Profiles
+
+- [LinkedIn](https://www.linkedin.com/in/harkit-singh/)
+- [LeetCode](https://leetcode.com/u/Harkit07/)
+- [GeeksforGeeks](https://www.geeksforgeeks.org/profile/harkit07?tab=activity)
 
 ### `resumeData` Structure
 

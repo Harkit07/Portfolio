@@ -4,6 +4,7 @@ import {
   Phone,
   MapPin,
   GitBranch,
+  Code2,
   ExternalLink,
   Download,
 } from "lucide-react";
@@ -105,6 +106,31 @@ function App() {
                 <span className="flex items-center gap-2">
                   <Phone size={16} className="text-primary" /> {basics.phone}
                 </span>
+              </div>
+
+              <div className="flex flex-wrap gap-3 mt-6">
+                {basics.links
+                  .filter((link) =>
+                    ["LinkedIn", "LeetCode", "GeeksforGeeks"].includes(
+                      link.name,
+                    ),
+                  )
+                  .map((link) => (
+                    <a
+                      key={link.name}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 text-sm text-gray-300 hover:border-primary/50 hover:text-white transition-colors"
+                    >
+                      {link.name === "LeetCode" ? (
+                        <Code2 size={16} />
+                      ) : (
+                        <ExternalLink size={16} />
+                      )}
+                      {link.name}
+                    </a>
+                  ))}
               </div>
             </FadeIn>
           </section>
