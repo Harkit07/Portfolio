@@ -2,16 +2,13 @@
   <img src="./public/Img.png" alt="Harkit Singh Portfolio Logo" width="200"/>
 </p>
 
-- 📜 **Certificate Links** — Direct links to the Full Stack and Java DSA certificates
-
 ## 📋 Table of Contents
 
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
-  │ ├── Certificate FullStack.pdf # Full Stack certificate
-  │ ├── Certificate Java DSA.pdf # Java DSA certificate
+- [Customization](#customization)
 - [Online Profiles](#online-profiles)
 - [Projects](#projects)
 - [Sections Overview](#sections-overview)
@@ -22,44 +19,25 @@
 ## ✨ Features
 
 - 🎬 **Scroll Animations** — Smooth fade-in-on-scroll effects powered by Framer Motion
-  certificates: [
-  {
-  name: "Certificate Name",
-  issuer: "Certificate Issuer",
-  dates: "Year",
-  url: "/certificate-file.pdf",
-  },
-  ],
 - 🪟 **Glassmorphism UI** — Frosted glass cards with subtle borders and blur effects
 - 🌌 **Radial Gradient Background** — Fixed ambient blue glow for depth and atmosphere
 - 📱 **Fully Responsive** — Adapts cleanly from mobile to desktop layouts
 - 🗂️ **Data-Driven** — All personal content lives in `data.js` — update one file to refresh the entire site
 - 🔗 **Resume PDF Link** — Direct download button for the PDF resume in the hero section
+- 📜 **Certificate Links** — Direct links to the Full Stack and Java DSA certificates
 - ⚓ **Smooth Navigation** — Fixed glassmorphism navbar with anchor links to all sections
 
 ---
 
-### Updating Certificates
-
-Place certificate PDFs in `public/` and add their details to the `certificates`
-array in `src/data.js`. The `url` should start with `/` and match the PDF
-filename, using `%20` for spaces in filenames.
-
-Current certificates:
-
-- [Full Stack Web Development -- Delta](public/Certificate%20FullStack.pdf) — Apna College, 2025
-- [Data Structures & Algorithms with Java -- Alpha](public/Certificate%20Java%20DSA.pdf) — Apna College, 2026
-
 ## 🛠️ Tech Stack
 
-| Technology | Purpose |
-| Certifications | `#certifications` | Certificate details with links to PDF files |
-| -------------- | ------------------------------------------ |
-| React 19 | UI framework |
-| Vite | Build tool & dev server |
-| Framer Motion | Scroll-triggered fade-in animations |
-| Tailwind CSS | Utility-first styling |
-| Lucide React | Icon library (Mail, Phone, Github, etc.) |
+| Technology    | Purpose                                  |
+| ------------- | ---------------------------------------- |
+| React 19      | UI framework                             |
+| Vite          | Build tool & dev server                  |
+| Framer Motion | Scroll-triggered fade-in animations      |
+| Tailwind CSS  | Utility-first styling                    |
+| Lucide React  | Icon library (Mail, Phone, Github, etc.) |
 
 ---
 
@@ -68,14 +46,16 @@ Current certificates:
 ```text
 portfolio/
 ├── public/
-│   ├── Img.png                   # Logo
-│   └── Harkit Singh Resume.pdf   # Resume PDF served statically
+│   ├── Img.png                       # Logo
+│   ├── Harkit Singh Resume.pdf       # Resume PDF served statically
+│   ├── Certificate FullStack.pdf     # Full Stack certificate
+│   └── Certificate Java DSA.pdf      # Java DSA certificate
 ├── src/
-│   ├── App.jsx                   # Main layout & all sections
-│   ├── App.css                   # Custom component styles
-│   ├── data.js                   # ✅ All personal content lives here
-│   ├── main.jsx                  # React DOM entry point
-│   └── index.css                 # Global styles & Tailwind directives
+│   ├── App.jsx                       # Main layout & all sections
+│   ├── App.css                       # Custom component styles
+│   ├── data.js                       # ✅ All personal content lives here
+│   ├── main.jsx                      # React DOM entry point
+│   └── index.css                     # Global styles & Tailwind directives
 └── package.json
 ```
 
@@ -117,12 +97,6 @@ Optimized output goes to the `dist/` folder, ready to deploy on Render, Vercel, 
 ## ✏️ Customization
 
 All personal content is centralized in **`src/data.js`**. You never need to touch `App.jsx` to update your information — just edit the data file and the whole site updates.
-
-## 🌐 Online Profiles
-
-- [LinkedIn](https://www.linkedin.com/in/harkit-singh/)
-- [LeetCode](https://leetcode.com/u/Harkit07/)
-- [GeeksforGeeks](https://www.geeksforgeeks.org/profile/harkit07?tab=activity)
 
 ### `resumeData` Structure
 
@@ -184,6 +158,34 @@ Replace `public/Harkit Singh Resume.pdf` with your updated file. If you rename i
 <a href="/Your New Resume Name.pdf" target="_blank" ...>
 ```
 
+### Updating Certificates
+
+Place certificate PDFs in `public/` and add their details to the `certificates` array in `src/data.js`. The `url` should start with `/` and match the PDF filename, using `%20` for spaces in filenames.
+
+```js
+certificates: [
+  {
+    name: "Certificate Name",
+    issuer: "Certificate Issuer",
+    dates: "Year",
+    url: "/certificate-file.pdf",
+  },
+],
+```
+
+Current certificates:
+
+- [Full Stack Web Development -- Delta](public/Certificate%20FullStack.pdf) — Apna College, 2025
+- [Data Structures & Algorithms with Java -- Alpha](public/Certificate%20Java%20DSA.pdf) — Apna College, 2026
+
+---
+
+## 🌐 Online Profiles
+
+- [LinkedIn](https://www.linkedin.com/in/harkit-singh/)
+- [LeetCode](https://leetcode.com/u/Harkit07/)
+- [GeeksforGeeks](https://www.geeksforgeeks.org/profile/harkit07?tab=activity)
+
 ---
 
 ## 🗂️ Projects
@@ -235,14 +237,15 @@ Replace `public/Harkit Singh Resume.pdf` with your updated file. If you rename i
 
 ## 📄 Sections Overview
 
-| Section          | Anchor        | Description                                         |
-| ---------------- | ------------- | --------------------------------------------------- |
-| Hero / About     | `#about`      | Name, title, summary, contact info, and CTA buttons |
-| Key Achievements | `#experience` | Work or self-directed project accomplishments       |
-| Projects         | `#projects`   | Cards with tech stack, dates, and feature bullets   |
-| Technical Skills | `#skills`     | Categorized skill tag groups                        |
-| Education        | —             | Degree, institution, CGPA, and graduation dates     |
-| Footer           | —             | GitHub / project links and copyright notice         |
+| Section          | Anchor            | Description                                         |
+| ---------------- | ----------------- | --------------------------------------------------- |
+| Hero / About     | `#about`          | Name, title, summary, contact info, and CTA buttons |
+| Key Achievements | `#experience`     | Work or self-directed project accomplishments       |
+| Projects         | `#projects`       | Cards with tech stack, dates, and feature bullets   |
+| Technical Skills | `#skills`         | Categorized skill tag groups                        |
+| Certifications   | `#certifications` | Certificate details with links to PDF files         |
+| Education        | —                 | Degree, institution, CGPA, and graduation dates     |
+| Footer           | —                 | GitHub / project links and copyright notice         |
 
 ---
 
