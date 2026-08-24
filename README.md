@@ -6,7 +6,7 @@
 
 A modern, animated personal portfolio website built with React and Vite. Features smooth scroll animations, a glassmorphism UI, and sections for projects, skills, achievements, and education — all driven by a single data file for easy updates.
 
-🔗 **Live Demo:** [your-portfolio-url.com](https://portfolio-8zov.onrender.com/)
+🔗 **Live Demo:** [portfolio-8zov.onrender.com](https://portfolio-8zov.onrender.com/)
 
 ---
 
