@@ -7,6 +7,7 @@ import {
   Code2,
   ExternalLink,
   Download,
+  Award,
 } from "lucide-react";
 import { resumeData } from "./data";
 
@@ -26,7 +27,8 @@ const FadeIn = ({ children, delay = 0 }) => {
 };
 
 function App() {
-  const { basics, skills, achievements, projects, education } = resumeData;
+  const { basics, skills, achievements, projects, education, certificates } =
+    resumeData;
 
   return (
     <LazyMotion features={domAnimation}>
@@ -54,6 +56,12 @@ function App() {
             </a>
             <a href="#skills" className="hover:text-white transition-colors">
               Skills
+            </a>
+            <a
+              href="#certifications"
+              className="hover:text-white transition-colors"
+            >
+              Certifications
             </a>
           </div>
         </nav>
@@ -263,6 +271,47 @@ function App() {
                         </span>
                       ))}
                     </div>
+                  </div>
+                ))}
+              </div>
+            </FadeIn>
+          </section>
+
+          {/* CERTIFICATIONS */}
+          <section id="certifications" className="scroll-mt-24">
+            <FadeIn>
+              <h3 className="text-3xl font-bold mb-10 flex items-center gap-4">
+                Certifications
+                <div className="h-px bg-white/10 flex-1"></div>
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                {certificates.map((certificate) => (
+                  <div
+                    key={certificate.name}
+                    className="glass-card p-8 flex flex-col justify-between gap-6"
+                  >
+                    <div className="flex items-start gap-4">
+                      <Award className="text-primary shrink-0" size={24} />
+                      <div>
+                        <h4 className="text-xl font-bold text-white">
+                          {certificate.name}
+                        </h4>
+                        <p className="text-gray-400 mt-2">
+                          {certificate.issuer} · {certificate.dates}
+                        </p>
+                        <p className="text-primary mt-2 font-medium">
+                          Certificate of Completion
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href={certificate.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-sm text-primary hover:text-white transition-colors font-medium"
+                    >
+                      <ExternalLink size={16} /> View Certificate
+                    </a>
                   </div>
                 ))}
               </div>

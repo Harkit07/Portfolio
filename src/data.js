@@ -155,4 +155,18 @@ export const resumeData = {
       metrics: "",
     },
   ],
+  certificates: [
+    {
+      name: "Full Stack Web Development -- Delta",
+      issuer: "Apna College",
+      dates: "2025",
+      url: "/Certificate%20FullStack.pdf",
+    },
+    {
+      name: "Data Structures & Algorithms with Java -- Alpha",
+      issuer: "Apna College",
+      dates: "2026",
+      url: "/Certificate%20Java%20DSA.pdf",
+    },
+  ],
 };

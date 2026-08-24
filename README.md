@@ -2,13 +2,7 @@
   <img src="./public/Img.png" alt="Harkit Singh Portfolio Logo" width="200"/>
 </p>
 
-# 🧑‍💻 Harkit Singh — Developer Portfolio
-
-A modern, animated personal portfolio website built with React and Vite. Features smooth scroll animations, a glassmorphism UI, and sections for projects, skills, achievements, and education — all driven by a single data file for easy updates.
-
-🔗 **Live Demo:** [portfolio-8zov.onrender.com](https://portfolio-8zov.onrender.com/)
-
----
+- 📜 **Certificate Links** — Direct links to the Full Stack and Java DSA certificates
 
 ## 📋 Table of Contents
 
@@ -16,7 +10,8 @@ A modern, animated personal portfolio website built with React and Vite. Feature
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
-- [Customization](#customization)
+  │ ├── Certificate FullStack.pdf # Full Stack certificate
+  │ ├── Certificate Java DSA.pdf # Java DSA certificate
 - [Online Profiles](#online-profiles)
 - [Projects](#projects)
 - [Sections Overview](#sections-overview)
@@ -27,6 +22,14 @@ A modern, animated personal portfolio website built with React and Vite. Feature
 ## ✨ Features
 
 - 🎬 **Scroll Animations** — Smooth fade-in-on-scroll effects powered by Framer Motion
+  certificates: [
+  {
+  name: "Certificate Name",
+  issuer: "Certificate Issuer",
+  dates: "Year",
+  url: "/certificate-file.pdf",
+  },
+  ],
 - 🪟 **Glassmorphism UI** — Frosted glass cards with subtle borders and blur effects
 - 🌌 **Radial Gradient Background** — Fixed ambient blue glow for depth and atmosphere
 - 📱 **Fully Responsive** — Adapts cleanly from mobile to desktop layouts
@@ -36,15 +39,27 @@ A modern, animated personal portfolio website built with React and Vite. Feature
 
 ---
 
+### Updating Certificates
+
+Place certificate PDFs in `public/` and add their details to the `certificates`
+array in `src/data.js`. The `url` should start with `/` and match the PDF
+filename, using `%20` for spaces in filenames.
+
+Current certificates:
+
+- [Full Stack Web Development -- Delta](public/Certificate%20FullStack.pdf) — Apna College, 2025
+- [Data Structures & Algorithms with Java -- Alpha](public/Certificate%20Java%20DSA.pdf) — Apna College, 2026
+
 ## 🛠️ Tech Stack
 
-| Technology    | Purpose                                  |
+| Technology | Purpose |
+| Certifications | `#certifications` | Certificate details with links to PDF files |
 | -------------- | ------------------------------------------ |
-| React 19      | UI framework                             |
-| Vite          | Build tool & dev server                  |
-| Framer Motion | Scroll-triggered fade-in animations      |
-| Tailwind CSS  | Utility-first styling                    |
-| Lucide React  | Icon library (Mail, Phone, Github, etc.) |
+| React 19 | UI framework |
+| Vite | Build tool & dev server |
+| Framer Motion | Scroll-triggered fade-in animations |
+| Tailwind CSS | Utility-first styling |
+| Lucide React | Icon library (Mail, Phone, Github, etc.) |
 
 ---
 
@@ -221,7 +236,7 @@ Replace `public/Harkit Singh Resume.pdf` with your updated file. If you rename i
 ## 📄 Sections Overview
 
 | Section          | Anchor        | Description                                         |
-| ------------------ | --------------- | ------------------------------------------------------ |
+| ---------------- | ------------- | --------------------------------------------------- |
 | Hero / About     | `#about`      | Name, title, summary, contact info, and CTA buttons |
 | Key Achievements | `#experience` | Work or self-directed project accomplishments       |
 | Projects         | `#projects`   | Cards with tech stack, dates, and feature bullets   |
