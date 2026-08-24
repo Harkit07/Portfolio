@@ -136,7 +136,9 @@ function App() {
                       ) : (
                         <ExternalLink size={16} />
                       )}
-                      <span className="break-words text-center">{link.name}</span>
+                      <span className="wrap-break-word text-center">
+                        {link.name}
+                      </span>
                     </a>
                   ))}
               </div>
