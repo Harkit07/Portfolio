@@ -1,8 +1,12 @@
+<p align="center">
+  <img src="./public/Img.png" alt="Harkit Singh Portfolio Logo" width="200"/>
+</p>
+
 # 🧑‍💻 Harkit Singh — Developer Portfolio
 
 A modern, animated personal portfolio website built with React and Vite. Features smooth scroll animations, a glassmorphism UI, and sections for projects, skills, achievements, and education — all driven by a single data file for easy updates.
 
-🔗 **Live Demo:** [your-portfolio-url.com](https://your-portfolio-url.com)
+🔗 **Live Demo:** [your-portfolio-url.com](https://portfolio-8zov.onrender.com/)
 
 ---
 
@@ -34,7 +38,7 @@ A modern, animated personal portfolio website built with React and Vite. Feature
 ## 🛠️ Tech Stack
 
 | Technology    | Purpose                                  |
-| ------------- | ---------------------------------------- |
+| -------------- | ------------------------------------------ |
 | React 19      | UI framework                             |
 | Vite          | Build tool & dev server                  |
 | Framer Motion | Scroll-triggered fade-in animations      |
@@ -45,9 +49,10 @@ A modern, animated personal portfolio website built with React and Vite. Feature
 
 ## 📁 Project Structure
 
-```
+```text
 portfolio/
 ├── public/
+│   ├── Img.png                   # Logo
 │   └── Harkit Singh Resume.pdf   # Resume PDF served statically
 ├── src/
 │   ├── App.jsx                   # Main layout & all sections
@@ -172,7 +177,7 @@ Replace `public/Harkit Singh Resume.pdf` with your updated file. If you rename i
 - Engineered a multi-component cart system with real-time state updates using React.js and form validation via Formik, improving checkout reliability.
 - Deployed frontend and backend independently on Render.
 
-🔗 [Live Demo](https://boutiquefrontend-ymww.onrender.com/)
+🔗 [Live Demo](https://ravneetboutique.qzz.io/)
 
 ---
 
@@ -202,14 +207,14 @@ Replace `public/Harkit Singh Resume.pdf` with your updated file. If you rename i
 - Implemented MVC architecture with Express.js routing and EJS server-side templating, ensuring clean separation of concerns and maintainable codebase.
 - Handled multi-image uploads with Multer and persisted structured data using Mongoose ODM with MongoDB Atlas cloud database.
 
-🔗 [Live Demo](https://wanderlust-274r.onrender.com/listings)
+🔗 [Live Demo](https://wanderlust-jade-sigma.vercel.app/listings)
 
 ---
 
 ## 📄 Sections Overview
 
 | Section          | Anchor        | Description                                         |
-| ---------------- | ------------- | --------------------------------------------------- |
+| ------------------ | --------------- | ------------------------------------------------------ |
 | Hero / About     | `#about`      | Name, title, summary, contact info, and CTA buttons |
 | Key Achievements | `#experience` | Work or self-directed project accomplishments       |
 | Projects         | `#projects`   | Cards with tech stack, dates, and feature bullets   |
@@ -242,7 +247,7 @@ This is a static Vite app — deploy anywhere that supports static sites:
 
 - 📧 harkitsinghsran9584@gmail.com
 - 🐙 [github.com/Harkit07](https://github.com/Harkit07)
-- 🌐 [Boutique App](https://boutiquefrontend-ymww.onrender.com/) · [Wanderlust](https://wanderlust-274r.onrender.com/listings) · [AI-Assistant](https://ai-assistant-nsg8.onrender.com/)
+- 🌐 [Boutique App](https://ravneetboutique.qzz.io/) · [Wanderlust](https://wanderlust-jade-sigma.vercel.app/listings) · [AI-Assistant](https://ai-assistant-nsg8.onrender.com/)
 
 ---
 

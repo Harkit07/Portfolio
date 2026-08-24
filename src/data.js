@@ -146,7 +146,7 @@ export const resumeData = {
       degree: "Master of Computer Applications (MCA)",
       institution: "Shri Khushal Das University, Hanumangarh, Rajasthan",
       dates: "2025 – Present",
-      metrics: "CGPA: 7.6 / 10",
+      metrics: "CGPA: 7.37 / 10",
     },
     {
       degree: "Bachelor of Computer Applications (BCA)",
