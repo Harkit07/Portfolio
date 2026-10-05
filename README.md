@@ -1,62 +1,75 @@
 <p align="center">
-  <img src="./public/Img.png" alt="Harkit Singh Portfolio Logo" width="200"/>
+  <img src="./public/Img.png" alt="Harkit Singh Portfolio Logo" width="200" />
 </p>
 
-## 📋 Table of Contents
+<h1 align="center">Harkit Singh</h1>
+<h3 align="center">Full Stack Developer Portfolio</h3>
 
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
-- [Customization](#customization)
-- [Online Profiles](#online-profiles)
-- [Projects](#projects)
-- [Sections Overview](#sections-overview)
-- [Deployment](#deployment)
+<p align="center">
+  <a href="https://portfolio-8zov.onrender.com" target="_blank">Live Portfolio</a> ·
+  <a href="https://github.com/Harkit07" target="_blank">GitHub</a> ·
+  <a href="https://www.linkedin.com/in/harkit-singh/" target="_blank">LinkedIn</a>
+</p>
+
+A portfolio website built with React and Vite to showcase my projects, technical skills, certifications, education, and resume. It is designed to present my work in a clean, modern, and professional way for recruiters and collaborators.
+
+## 🌐 Live Demo
+
+Visit the live portfolio here:
+
+- [Harkit Singh Portfolio](https://portfolio-8zov.onrender.com)
+
+This deployed version reflects the latest portfolio updates and is the easiest way to view the project in production.
 
 ---
 
 ## ✨ Features
 
-- 🎬 **Scroll Animations** — Smooth fade-in-on-scroll effects powered by Framer Motion
-- 🪟 **Glassmorphism UI** — Frosted glass cards with subtle borders and blur effects
-- 🌌 **Radial Gradient Background** — Fixed ambient blue glow for depth and atmosphere
-- 📱 **Fully Responsive** — Adapts cleanly from mobile to desktop layouts
-- 🗂️ **Data-Driven** — All personal content lives in `data.js` — update one file to refresh the entire site
-- 🔗 **Resume PDF Link** — Direct download button for the PDF resume in the hero section
-- 📜 **Certificate Links** — Direct links to the Full Stack and Java DSA certificates
-- ⚓ **Smooth Navigation** — Fixed glassmorphism navbar with anchor links to all sections
+- Modern dark-themed portfolio UI with glassmorphism styling
+- Responsive design for mobile, tablet, and desktop screens
+- Section-based layout for About, Experience, Projects, Skills, Certifications, and Education
+- Downloadable resume PDF and embedded PDF preview
+- Dynamic content management from `src/data.js`
+- Project cards with live demo and GitHub links
+- Social and professional profile links in the hero and footer sections
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Technology    | Purpose                                  |
-| ------------- | ---------------------------------------- |
-| React 19      | UI framework                             |
-| Vite          | Build tool & dev server                  |
-| Framer Motion | Scroll-triggered fade-in animations      |
-| Tailwind CSS  | Utility-first styling                    |
-| Lucide React  | Icon library (Mail, Phone, Github, etc.) |
+| Technology | Purpose |
+| --- | --- |
+| React 19 | Frontend UI |
+| Vite | Development and build tooling |
+| Tailwind CSS | Utility-first styling |
+| Framer Motion | Scroll and fade animations |
+| Lucide React | Interface icons |
+| JavaScript (ES6+) | Application logic |
 
 ---
 
 ## 📁 Project Structure
 
 ```text
-portfolio/
+Portfolio/
 ├── public/
-│   ├── Img.png                       # Logo
-│   ├── Harkit Singh Resume.pdf       # Resume PDF served statically
-│   ├── Certificate FullStack.pdf     # Full Stack certificate
-│   └── Certificate Java DSA.pdf      # Java DSA certificate
+│   ├── Img.png                     # Logo
+│   ├── HarkitSinghResume.pdf      # Resume PDF
+│   ├── Certificate FullStack.pdf  # Full Stack Certificate
+│   ├── Certificate Java DSA.pdf    # Java DSA Certificate
+│   └── ...
 ├── src/
-│   ├── App.jsx                       # Main layout & all sections
-│   ├── App.css                       # Custom component styles
-│   ├── data.js                       # ✅ All personal content lives here
-│   ├── main.jsx                      # React DOM entry point
-│   └── index.css                     # Global styles & Tailwind directives
-└── package.json
+│   ├── App.jsx                    # Main portfolio page
+│   ├── data.js                    # Portfolio data
+│   ├── main.jsx                   # App entry point
+│   ├── index.css                  # Global styles
+│   └── App.css                    # Additional styles
+├── package.json
+├── vite.config.js
+├── index.html
+├── README.md
+├── .gitignore
+└── dist/                         # Build output
 ```
 
 ---
@@ -65,204 +78,127 @@ portfolio/
 
 ### Prerequisites
 
-- **Node.js** v18+
-- **npm** v9+
+- Node.js 18+
+- npm 9+
 
-### Installation
+### Install and run locally
 
 ```bash
-# 1. Clone the repository
-git clone https://github.com/Harkit07/<your-portfolio-repo>.git
-cd <your-portfolio-repo>
-
-# 2. Install dependencies
+git clone https://github.com/Harkit07/Portfolio.git
+cd Portfolio
 npm install
-
-# 3. Start the development server
 npm run dev
 ```
 
-The portfolio will be available at `http://localhost:5173`.
+Open:
 
-### Build for Production
+```text
+http://localhost:5173
+```
+
+### Production build
 
 ```bash
 npm run build
 ```
 
-Optimized output goes to the `dist/` folder, ready to deploy on Render, Vercel, Netlify, or any static host.
+The output is generated in the `dist/` folder, ready for deployment.
 
 ---
 
-## ✏️ Customization
+## 🧩 Portfolio Data
 
-All personal content is centralized in **`src/data.js`**. You never need to touch `App.jsx` to update your information — just edit the data file and the whole site updates.
+The portfolio content is centralized in `src/data.js`, which includes:
 
-### `resumeData` Structure
+- `basics` — name, title, summary, email, phone, and links
+- `skills` — categorized technical skill groups
+- `achievements` — notable achievements and milestones
+- `projects` — project cards with dates, stack, and descriptions
+- `education` — academic details
+- `certificates` — downloadable PDF certs
 
-```js
-export const resumeData = {
-  basics: {
-    name: "Your Name",
-    title: "Your Role",
-    summary: "Your bio / summary paragraph",
-    location: "City, Country",
-    email: "your@email.com",
-    phone: "+91-XXXXXXXXXX",
-    links: [
-      { name: "GitHub", url: "https://github.com/yourhandle" },
-      { name: "Project Name", url: "https://your-project-url.com" },
-    ],
-  },
-
-  skills: [
-    { category: "Languages", items: ["JavaScript", "HTML5", "CSS3"] },
-    { category: "Frontend", items: ["React.js", "Tailwind CSS"] },
-    // Add or remove skill groups freely
-  ],
-
-  achievements: [
-    {
-      title: "Role / Achievement Title",
-      company: "Company or Context",
-      dates: "Year – Present",
-      bullets: ["Achievement 1", "Achievement 2"],
-    },
-  ],
-
-  projects: [
-    {
-      title: "Project Name",
-      stack: "Tech stack string",
-      dates: "Month Year",
-      bullets: ["Feature 1", "Feature 2"],
-    },
-  ],
-
-  education: [
-    {
-      degree: "Your Degree",
-      institution: "Your University",
-      dates: "Year – Year",
-      metrics: "CGPA: X.X",
-    },
-  ],
-};
-```
-
-### Updating the Resume PDF
-
-Replace `public/Harkit Singh Resume.pdf` with your updated file. If you rename it, update the reference in `App.jsx`:
-
-```jsx
-<a href="/Your New Resume Name.pdf" target="_blank" ...>
-```
-
-### Updating Certificates
-
-Place certificate PDFs in `public/` and add their details to the `certificates` array in `src/data.js`. The `url` should start with `/` and match the PDF filename, using `%20` for spaces in filenames.
-
-```js
-certificates: [
-  {
-    name: "Certificate Name",
-    issuer: "Certificate Issuer",
-    dates: "Year",
-    url: "/certificate-file.pdf",
-  },
-],
-```
-
-Current certificates:
-
-- [Full Stack Web Development -- Delta](public/Certificate%20FullStack.pdf) — Apna College, 2025
-- [Data Structures & Algorithms with Java -- Alpha](public/Certificate%20Java%20DSA.pdf) — Apna College, 2026
+This makes it easy to update the site without modifying the page structure.
 
 ---
 
-## 🌐 Online Profiles
+## 🌐 Featured Projects
 
+### AI Assistant (ChatGPT Clone)
+
+**Tech Stack:** MERN, Docker, Kubernetes, OpenAI API, JWT, GitHub Actions
+
+- Built a full-stack AI chat application with persistent chat threads and protected authentication
+- Integrated OpenAI responses with markdown and code block support
+- Added conversation history, user session management, and secure API access
+- Deployed using Docker, Kubernetes, and NGINX Ingress
+
+🔗 [Live Demo](https://ai-assistant-nsg8.onrender.com/)
+
+### Boutique — E-Commerce Platform
+
+**Tech Stack:** MERN, JWT, Cloudinary, Multer, Material UI
+
+- Created a boutique ecommerce platform with auth, cart, product management, and account flow
+- Added secure JWT auth, password-hashing, and protected routes
+- Integrated Cloudinary for product image uploads and storage
+- Delivered a polished shopping experience for browsing and purchasing
+
+🔗 [Live Demo](https://ravneetboutique.qzz.io/)
+
+### Wanderlust — Property Listings Platform
+
+**Tech Stack:** Node.js, Express, EJS, MongoDB, Mapbox, Cloudinary, GitHub Actions
+
+- Built an Airbnb-inspired travel listing app with CRUD operations and property review support
+- Integrated Mapbox for listing locations and interactive geolocation maps
+- Added auth, session handling, and authorization for listing owners and reviewers
+- Set up testing and deployment checks with GitHub Actions
+
+🔗 [Live Demo](https://wanderlust-jade-sigma.vercel.app/listings)
+
+---
+
+## 📄 Resume and Certifications
+
+The portfolio includes:
+
+- Downloadable resume: `public/HarkitSinghResume.pdf`
+- Full Stack certificate: `public/Certificate FullStack.pdf`
+- Java DSA certificate: `public/Certificate Java DSA.pdf`
+
+These are linked in the site hero section and certifications area.
+
+---
+
+## 🌐 Links
+
+- [Portfolio](https://portfolio-8zov.onrender.com)
+- [GitHub](https://github.com/Harkit07)
 - [LinkedIn](https://www.linkedin.com/in/harkit-singh/)
 - [LeetCode](https://leetcode.com/u/Harkit07/)
 - [GeeksforGeeks](https://www.geeksforgeeks.org/profile/harkit07?tab=activity)
 
 ---
 
-## 🗂️ Projects
-
-### 🛍️ Boutique Website
-
-**Stack:** React.js, Node.js, Express.js, MongoDB, JWT, Cloudinary, Multer, Material UI
-**Dates:** Jan 2026 – Present
-
-- Built a production-deployed full-stack e-commerce platform for boutique retail with 5+ core modules including user authentication, product management, cart, and customer reviews.
-- Implemented secure JWT-based authentication with profile management, password reset via email flow, and session handling — reducing unauthorized access risk.
-- Integrated Cloudinary for scalable image uploads and storage, enabling dynamic product media management without server-side file bloat.
-- Engineered a multi-component cart system with real-time state updates using React.js and form validation via Formik, improving checkout reliability.
-- Deployed frontend and backend independently on Render.
-
-🔗 [Live Demo](https://ravneetboutique.qzz.io/)
-
----
-
-### 🤖 AI-Assistant
-
-**Stack:** React.js, Node.js, Express.js, MongoDB, JWT, OpenAI API
-**Dates:** Jan 2026 – Present
-
-- Built a full-stack ChatGPT clone with multi-turn conversations, persistent chat history, and thread management using React, Node.js, and MongoDB.
-- Implemented JWT authentication with protected API routes for secure user sessions.
-- Designed a scalable chat storage system with per-user thread organisation using efficient MongoDB queries.
-- Built a responsive UI with React Context API for global state management across chat, sidebar, and auth flows.
-- Integrated Markdown rendering with syntax-highlighted code blocks for clean AI response display.
-- Deployed frontend and backend independently on Render.
-
-🔗 [Live Demo](https://ai-assistant-nsg8.onrender.com/)
-
----
-
-### 🏕️ Wanderlust
-
-**Stack:** Node.js, Express.js, EJS, MongoDB, Mongoose, MapBox, Multer
-**Dates:** Aug 2025
-
-- Developed a full-stack property listing platform with core features including listing creation, editing, deletion, and image uploads.
-- Integrated MapBox API for interactive geolocation maps on each property listing page, enhancing user experience with dynamic map rendering.
-- Implemented MVC architecture with Express.js routing and EJS server-side templating, ensuring clean separation of concerns and maintainable codebase.
-- Handled multi-image uploads with Multer and persisted structured data using Mongoose ODM with MongoDB Atlas cloud database.
-
-🔗 [Live Demo](https://wanderlust-jade-sigma.vercel.app/listings)
-
----
-
-## 📄 Sections Overview
-
-| Section          | Anchor            | Description                                         |
-| ---------------- | ----------------- | --------------------------------------------------- |
-| Hero / About     | `#about`          | Name, title, summary, contact info, and CTA buttons |
-| Key Achievements | `#experience`     | Work or self-directed project accomplishments       |
-| Projects         | `#projects`       | Cards with tech stack, dates, and feature bullets   |
-| Technical Skills | `#skills`         | Categorized skill tag groups                        |
-| Certifications   | `#certifications` | Certificate details with links to PDF files         |
-| Education        | —                 | Degree, institution, CGPA, and graduation dates     |
-| Footer           | —                 | GitHub / project links and copyright notice         |
-
----
-
 ## 🚢 Deployment
 
-This is a static Vite app — deploy anywhere that supports static sites:
+This portfolio is deployable on any static hosting platform, including:
 
-**Vercel / Netlify**
+- Vercel
+- Netlify
+- Render
 
-- Connect your GitHub repo
-- Build command: `npm run build`
-- Output directory: `dist`
+Build command:
 
-**Render (Static Site)**
+```bash
+npm run build
+```
 
-- Build command: `npm run build`
-- Publish directory: `dist`
+Publish directory:
+
+```text
+dist
+```
 
 ---
 
@@ -270,12 +206,12 @@ This is a static Vite app — deploy anywhere that supports static sites:
 
 **Harkit Singh**
 
-- 📧 harkitsinghsran9584@gmail.com
-- 🐙 [github.com/Harkit07](https://github.com/Harkit07)
-- 🌐 [Boutique App](https://ravneetboutique.qzz.io/) · [Wanderlust](https://wanderlust-jade-sigma.vercel.app/listings) · [AI-Assistant](https://ai-assistant-nsg8.onrender.com/)
+- Email: harkitsinghsran9584@gmail.com
+- GitHub: https://github.com/Harkit07
+- LinkedIn: https://www.linkedin.com/in/harkit-singh/
 
 ---
 
 ## 📝 License
 
-This project is open source and free to use as a portfolio template.
+This project is intended for personal portfolio use and can be adapted for similar developer portfolio projects.

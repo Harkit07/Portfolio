@@ -63,6 +63,14 @@ function App() {
             >
               Certifications
             </a>
+            <a
+              href="/HarkitSinghResume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors"
+            >
+              Resume
+            </a>
           </div>
         </nav>
 
@@ -91,9 +99,10 @@ function App() {
                   View My Work
                 </a>
                 <a
-                  href="/Harkit Singh Resume.pdf"
+                  href="/HarkitSinghResume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
+                  download="HarkitSinghResume.pdf"
                   className="px-6 py-3 rounded-full border border-white/20 hover:bg-white/10 transition-colors flex items-center justify-center gap-2"
                 >
                   <Download size={18} /> Resume PDF
@@ -141,6 +150,22 @@ function App() {
                       </span>
                     </a>
                   ))}
+              </div>
+            </FadeIn>
+          </section>
+
+          <section id="resume" className="scroll-mt-24">
+            <FadeIn>
+              <h3 className="text-3xl font-bold mb-10 flex items-center gap-4">
+                Resume
+                <div className="h-px bg-white/10 flex-1"></div>
+              </h3>
+              <div className="glass-card p-4 md:p-6">
+                <iframe
+                  src="/HarkitSinghResume.pdf"
+                  title="Harkit Singh Resume"
+                  className="w-full min-h-175 rounded-xl border border-white/10 bg-white/5"
+                />
               </div>
             </FadeIn>
           </section>
