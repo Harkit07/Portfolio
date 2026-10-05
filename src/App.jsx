@@ -1,4 +1,10 @@
-import { LazyMotion, domAnimation, m, useReducedMotion } from "framer-motion";
+import {
+  LazyMotion,
+  domAnimation,
+  m,
+  useReducedMotion,
+} from "framer-motion";
+import { useEffect, useState } from "react";
 import {
   Mail,
   Phone,
@@ -8,6 +14,7 @@ import {
   ExternalLink,
   Download,
   Award,
+  X,
 } from "lucide-react";
 import { resumeData } from "./data";
 
@@ -29,6 +36,24 @@ const FadeIn = ({ children, delay = 0 }) => {
 function App() {
   const { basics, skills, achievements, projects, education, certificates } =
     resumeData;
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
+
+  useEffect(() => {
+    if (!isResumeOpen) return undefined;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") setIsResumeOpen(false);
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isResumeOpen]);
 
   return (
     <LazyMotion features={domAnimation}>
@@ -37,11 +62,11 @@ function App() {
         <div className="fixed inset-0 z-[-1] bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-blue-900/20 via-background to-background pointer-events-none" />
 
         {/* Navbar */}
-        <nav className="fixed top-0 w-full z-50 glass-card rounded-none border-x-0 border-t-0 border-b-white/10 px-6 py-4 flex justify-between items-center">
+        <nav className="fixed top-0 z-50 flex w-full flex-col items-stretch gap-3 glass-card rounded-none border-x-0 border-t-0 border-b-white/10 px-4 py-3 sm:px-6 sm:py-4 md:flex-row md:items-center md:justify-between">
           <div className="font-bold text-xl tracking-tighter bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent">
             Harkit Singh
           </div>
-          <div className="hidden md:flex gap-6 text-sm font-medium text-gray-300">
+          <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs font-medium text-gray-300 sm:text-sm md:gap-6">
             <a href="#about" className="hover:text-white transition-colors">
               About
             </a>
@@ -63,22 +88,21 @@ function App() {
             >
               Certifications
             </a>
-            <a
-              href="/HarkitSinghResume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              type="button"
+              onClick={() => setIsResumeOpen(true)}
               className="hover:text-white transition-colors"
             >
               Resume
-            </a>
+            </button>
           </div>
         </nav>
 
-        <main className="container mx-auto px-6 pt-32 pb-24 max-w-5xl space-y-32">
+        <main className="container mx-auto px-6 pt-32 pb-24 max-w-5xl space-y-20">
           {/* HERO SECTION */}
           <section
             id="about"
-            className="min-h-[70vh] flex flex-col justify-center"
+            className="min-h-[50vh] flex flex-col justify-center"
           >
             <FadeIn>
               <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4">
@@ -98,15 +122,13 @@ function App() {
                 >
                   View My Work
                 </a>
-                <a
-                  href="/HarkitSinghResume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  download="HarkitSinghResume.pdf"
+                <button
+                  type="button"
+                  onClick={() => setIsResumeOpen(true)}
                   className="px-6 py-3 rounded-full border border-white/20 hover:bg-white/10 transition-colors flex items-center justify-center gap-2"
                 >
-                  <Download size={18} /> Resume PDF
-                </a>
+                  <Download size={18} /> View Resume
+                </button>
               </div>
 
               <div className="flex flex-wrap gap-6 text-sm text-gray-400">
@@ -150,22 +172,6 @@ function App() {
                       </span>
                     </a>
                   ))}
-              </div>
-            </FadeIn>
-          </section>
-
-          <section id="resume" className="scroll-mt-24">
-            <FadeIn>
-              <h3 className="text-3xl font-bold mb-10 flex items-center gap-4">
-                Resume
-                <div className="h-px bg-white/10 flex-1"></div>
-              </h3>
-              <div className="glass-card p-4 md:p-6">
-                <iframe
-                  src="/HarkitSinghResume.pdf"
-                  title="Harkit Singh Resume"
-                  className="w-full min-h-175 rounded-xl border border-white/10 bg-white/5"
-                />
               </div>
             </FadeIn>
           </section>
@@ -405,6 +411,53 @@ function App() {
             </FadeIn>
           </section>
         </main>
+
+        {isResumeOpen && (
+          <div
+            className="fixed inset-0 z-60 flex items-center justify-center bg-black/80 p-0 backdrop-blur-sm sm:p-4"
+            onClick={() => setIsResumeOpen(false)}
+          >
+            <section
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="resume-dialog-title"
+              className="glass-card flex h-screen h-[100dvh] w-full max-w-none flex-col overflow-hidden rounded-none border-0 sm:h-[min(90vh,900px)] sm:max-w-5xl sm:rounded-2xl sm:border"
+              onClick={(event) => event.stopPropagation()}
+            >
+              <header className="flex shrink-0 flex-wrap items-center justify-between gap-x-3 gap-y-2 border-b border-white/10 px-3 py-3 sm:px-5 sm:py-4">
+                <h2
+                  id="resume-dialog-title"
+                  className="text-base font-semibold sm:text-lg"
+                >
+                  Harkit Singh Resume
+                </h2>
+                <div className="flex items-center gap-1 sm:gap-3">
+                  <a
+                    href="/HarkitSinghResume.pdf"
+                    download="HarkitSinghResume.pdf"
+                    className="flex min-h-10 items-center gap-2 rounded-lg px-2 text-sm text-gray-300 transition-colors hover:bg-white/10 hover:text-white sm:px-3"
+                  >
+                    <Download size={16} />
+                    Download
+                  </a>
+                  <button
+                    type="button"
+                    onClick={() => setIsResumeOpen(false)}
+                    aria-label="Close resume"
+                    className="rounded-full p-2 text-gray-300 transition-colors hover:bg-white/10 hover:text-white"
+                  >
+                    <X size={20} />
+                  </button>
+                </div>
+              </header>
+              <iframe
+                src="/HarkitSinghResume.pdf"
+                title="Harkit Singh Resume"
+                className="block min-h-0 w-full flex-1 bg-white/5"
+              />
+            </section>
+          </div>
+        )}
       </div>
     </LazyMotion>
   );
