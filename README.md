@@ -125,36 +125,37 @@ This makes it easy to update the site without modifying the page structure.
 
 ### AI Assistant (ChatGPT Clone)
 
-**Tech Stack:** MERN, Docker, Kubernetes, OpenAI API, JWT, GitHub Actions
+**Tech Stack:** React, Express, MongoDB, Docker, Kubernetes, GitHub Actions
 
-- Built a full-stack AI chat application with persistent chat threads and protected authentication
-- Integrated OpenAI responses with markdown and code block support
-- Added conversation history, user session management, and secure API access
-- Deployed using Docker, Kubernetes, and NGINX Ingress
+- Built a full-stack AI chat app with JWT auth, per-user conversation threads, real-time streamed replies (SSE) rendered as markdown, and conversation context (last 10 messages)
+- Containerized frontend (multi-stage Nginx build) and backend with Docker
+- Wrote Kubernetes Deployments, Services, Secrets, and NGINX Ingress manifests with path-based routing and ran them on a local cluster
+- Set up GitHub Actions to build and push both images to Docker Hub on every push to main
+- Public demo hosted on Render (frontend) and Netlify Functions (backend)
 
-🔗 [Live Demo](https://ai-assistant-nsg8.onrender.com/)
+🔗 [Live Demo](https://ai-assistant-nsg8.onrender.com/) · [GitHub](https://github.com/Harkit07/AI-Assistant)
 
 ### Boutique — E-Commerce Platform
 
-**Tech Stack:** MERN, JWT, Cloudinary, Multer, Material UI
+**Tech Stack:** React, Express, MongoDB, Material UI, Cloudinary
 
-- Created a boutique ecommerce platform with auth, cart, product management, and account flow
-- Added secure JWT auth, password-hashing, and protected routes
-- Integrated Cloudinary for product image uploads and storage
-- Delivered a polished shopping experience for browsing and purchasing
+- Developed a full-stack store with product catalog, server-persisted cart, reviews, profiles, and admin/user roles
+- Built JWT auth with bcrypt hashing, OTP password reset via Nodemailer (hashed OTP, 5-minute expiry), and server-side token blacklisting on logout
+- Hardened the API with Helmet and rate limiting on auth routes
+- Implemented signed direct-to-Cloudinary uploads with server-side ownership checks
+- Improved frontend performance with React.lazy code splitting, split contexts, and React Query caching
 
-🔗 [Live Demo](https://ravneetboutique.qzz.io/)
+🔗 [Live Demo](https://ravneetboutique.qzz.io/) · [GitHub](https://github.com/Harkit07/Boutique)
 
 ### Wanderlust — Property Listings Platform
 
-**Tech Stack:** Node.js, Express, EJS, MongoDB, Mapbox, Cloudinary, GitHub Actions
+**Tech Stack:** Node.js, Express, EJS, MongoDB, MapBox, Jest
 
-- Built an Airbnb-inspired travel listing app with CRUD operations and property review support
-- Integrated Mapbox for listing locations and interactive geolocation maps
-- Added auth, session handling, and authorization for listing owners and reviewers
-- Set up testing and deployment checks with GitHub Actions
+- Built an Airbnb-style listing app with full CRUD, reviews, MapBox geocoding and maps, Cloudinary image upload, and Joi validation, following MVC structure
+- Implemented bcryptjs hashing and MongoDB-backed sessions with owner-only authorization
+- Test-gated CI/CD: GitHub Actions runs Jest and Supertest tests against a MongoDB service container, and only passing builds are deployed to Vercel via the CLI
 
-🔗 [Live Demo](https://wanderlust-jade-sigma.vercel.app/listings)
+🔗 [Live Demo](https://wanderlust-jade-sigma.vercel.app/listings) · [GitHub](https://github.com/Harkit07/Wanderlust)
 
 ---
 
