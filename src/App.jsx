@@ -421,7 +421,7 @@ function App() {
               role="dialog"
               aria-modal="true"
               aria-labelledby="resume-dialog-title"
-              className="glass-card flex h-screen h-[100dvh] w-full max-w-none flex-col overflow-hidden rounded-none border-0 sm:h-[min(90vh,900px)] sm:max-w-5xl sm:rounded-2xl sm:border"
+              className="glass-card flex h-screen supports-[height:100dvh]:h-dvh w-full max-w-none flex-col overflow-hidden rounded-none border-0 sm:h-[min(90vh,900px)] sm:max-w-5xl sm:rounded-2xl sm:border"
               onClick={(event) => event.stopPropagation()}
             >
               <header className="flex shrink-0 flex-wrap items-center justify-between gap-x-3 gap-y-2 border-b border-white/10 px-3 py-3 sm:px-5 sm:py-4">
